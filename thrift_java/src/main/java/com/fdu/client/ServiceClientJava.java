@@ -32,7 +32,8 @@ public class ServiceClientJava {
             transport.open();
 
             // 创建请求对象Request
-            Request request = new Request(null, "saySB"); // Java request
+            Request request = new Request(null, "sayHello"); // ServiceA
+//            Request request = new Request(null, "sayHello"); // ServiceB
 
             Map<String,String> map = new HashMap<String,String>();
             map.put("param", "thrift");

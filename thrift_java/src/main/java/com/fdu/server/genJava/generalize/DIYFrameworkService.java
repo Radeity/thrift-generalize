@@ -14,7 +14,7 @@ public class DIYFrameworkService {
 
   public interface Iface {
 
-    public Response send(Request request) throws ServiceException, org.apache.thrift.TException, InvocationTargetException, IllegalAccessException;
+    public Response send(Request request) throws ServiceException, org.apache.thrift.TException, InvocationTargetException, IllegalAccessException, InstantiationException;
 
   }
 
@@ -164,6 +164,8 @@ public class DIYFrameworkService {
         } catch (IllegalAccessException e) {
           e.printStackTrace();
         } catch (InvocationTargetException e) {
+          e.printStackTrace();
+        } catch (InstantiationException e) {
           e.printStackTrace();
         }
         return result;
