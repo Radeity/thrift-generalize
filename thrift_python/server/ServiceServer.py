@@ -15,7 +15,6 @@ if __name__ == '__main__':
     tfactory = TTransport.TBufferedTransportFactory()
     #tfactory = TTransport.TFramedTransportFactory()
     pfactory = TBinaryProtocol.TBinaryProtocolFactory()
-    #server = TServer.TSimpleServer(processor, transport, tfactory, pfactory)
     server = TServer.TSimpleServer(processor, transport, tfactory, pfactory)
     print('Starting the server...')
     server.serve()
